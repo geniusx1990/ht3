@@ -35,11 +35,10 @@ Fibonacci numbers one at a time using lazy evaluation.
 
 function fibonacciGenerator() {
     let prev = 0;
-    let current = 1;
-
+    let currecnt = 1;
     return () => {
-        const fib = prev;
-        [prev, current] = [current, prev + 1];
+        const fib = currecnt;
+        [prev, currecnt] = [currecnt, prev + currecnt];
         return fib;
     }
 }
